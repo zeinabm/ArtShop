@@ -30,7 +30,7 @@ div {
 .favorite-container {
   position: absolute;
   top: 37px;
-  padding-left: 31px;
+  padding-left: 22px;
   display: table-cell;
   vertical-align: middle;
 }
@@ -65,10 +65,15 @@ div {
   color: white;
   padding: 10px 15px 10px 15px;
   text-align: center;
-  font-family: 'Mitra', 'Nazanin';
-  font-size: 23px;
+  font-family: 'Mitra', 'Nazanin', sans-serif;
+  font-size: 21px;
   border: none;
   border-radius: 5px;
+
+  //i {
+  //  font-family: 'Mitra', 'Nazanin', sans-serif;
+  //  font-size: 21px;
+  //}
 }
 
 .btn-fav:hover {
@@ -729,9 +734,9 @@ tr, td {
   padding: 0px 0 15px;
   width: 405px;
   .authername {
-    font-size: 23px;
+    font-size: 21px;
     color: #32aea3;
-    line-height: 25px;
+    line-height: 21px;
     font-family: 'Morvarid';
     span {
       font-size: 16px;

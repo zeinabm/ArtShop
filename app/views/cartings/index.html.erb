@@ -20,7 +20,9 @@
               <td>
                 <%= carting.quantity %></td>
               <td>
-                <%= link_to "حذف",  carting, method: :delete%>
+                <%= link_to carting, :method => :delete do %>
+                    <i class="fa fa-trash-o fa-lg"></i>
+                <% end %>
               </td>
               <td>
                 <%= link_to (image_tag carting.item.photos.first._photo.url(:thumb)), item_path(carting.item) %>

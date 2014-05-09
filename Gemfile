@@ -3,8 +3,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
+gem 'rake', '~> 10.3.1'
+
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 
 # manage photos
 gem "paperclip", "~> 4.1"
@@ -40,7 +42,7 @@ end
 gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -52,3 +54,5 @@ gem 'acts-as-taggable-on'
 gem 'will_paginate'
 #gem 'compass'
 #gem 'foundation-rails'
+gem 'rails_12factor', group: :production
+#gem 'pg'

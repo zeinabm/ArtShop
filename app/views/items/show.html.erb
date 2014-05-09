@@ -11,9 +11,11 @@
           <div class="favorite-container">
 
             <% if user_signed_in? %>
-                <%= link_to "علاقه مندی", favorites_path(:item_id => @item, :user_id => current_user), :method => :post, :class => "default btn-fav" %>
+                <%= link_to favorites_path(:item_id => @item, :user_id => current_user), :method => :post, :class => "default btn-fav" do %>
+                    <i class="fa fa-heart">علاقه مندی</i>
+                <% end %>
             <% else %>
-                <%= link_to "علاقه مندی", favorites_path(:item_id => @item), :method => :post, :class => "default btn-fav" %>
+                <%= link_to "علاقه مندی", favorites_path(:item_id => @item), :method => :post, :remote => true,:class => "default btn-fav" %>
             <% end %>
           </div>
           <div class="nag-message">
