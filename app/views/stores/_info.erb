@@ -1,0 +1,43 @@
+
+      <table class="store" style="display: none;">
+        <thead></thead>
+        <tbody>
+        <tr>
+          <td><%= f.text_field :name %></td>
+          <td><span> * </span><%= f.label :name, "نام فروشگاه" %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.text_field :firstname %></td>
+          <td><span> * </span><%= f.label :firstname, "نام" %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.text_field :lastname %></td>
+          <td><span> * </span><%= f.label :lastname, "نام خانوادگی" %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.text_field :city %></td>
+          <td><%= f.label :city, "شهر محل سکوت" %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.text_field :bank %></td>
+          <td><span> * </span><%= f.label :bank, "نام بانک" %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.text_field :account_owner %></td>
+          <td><%= f.label :account_owner, "نام صاحب حساب" %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.text_field :account %></td>
+          <td><%= f.label :account, "شماره حساب" %></td>
+        </tr>
+        </tbody>
+      </table>
+
+
+

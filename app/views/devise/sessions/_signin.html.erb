@@ -1,0 +1,18 @@
+<%= form_for("user", :url => user_session_path, :html=>{:id=>"form-login"}) do |f| %>
+
+    <span><%= f.label :email, "نام کاربری یا ایمیل" %></span>
+
+    <%= f.email_field :email, :autofocus => true, :id=>"yjpop_username", :class=>"inputbox", :size=>"18" %>
+
+    <span><%= f.label :password, "رمزعبور", :for=>"yjpop_passwd" %></span>
+    <%= f.password_field :password, :id=>"yjpop_passwd", :class=>"inputbox" %>
+
+    <div class="wrapper">
+    <%= f.label :remember_me, "مرا به خاطر بسپار", :for=>"yjpop_remember" %>
+    <%= f.check_box :remember_me, :id=>"yjpop_remember" %>
+    </div>
+
+
+
+    <%= f.submit "ورود" ,:class=>"button"%>
+<% end %>

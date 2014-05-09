@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content_type: MyString
+  filename: MyString
+  binary_data: 
+
+two:
+  content_type: MyString
+  filename: MyString
+  binary_data: 

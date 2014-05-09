@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @store.name %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= @store.bank %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @store.account %>
+</p>
+
+<p>
+  <strong>Account owner:</strong>
+  <%= @store.account_owner %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @store.city %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @store.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @store.lastname %>
+</p>
+
+<p>
+  <strong>owner:</strong>
+  <%= @store.user.name %>
+</p>
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>

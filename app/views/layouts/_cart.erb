@@ -1,0 +1,90 @@
+<div class="cart">
+  <% total_price = 0 %>
+  <% count = 0 %>
+  <div class="vmCartModule" id="vmCartModule">
+    <div class="minicart">
+      <div class="total_products">
+        <!--where should this logic go?-->
+
+        <% if user_signed_in? %>
+        <% current_user.cartings.each do |carting| %>
+            <% if carting.status == "order" %>
+                <% total_price += carting.item.price %>
+                    <% count += 1 %>
+            <% end %>
+        <% end %>
+        <% end %>
+        <span class="cart_num"> <%= count %>  </span>
+        <span class="cart_num">  عدد </span>
+      </div>
+
+    </div>
+    <div id="cart_list" style="display: none;">
+      <% total_price = 0 %>
+      <div class="text-cart">سبد خرید شما تاکنون</div>
+      <div class="vm_cart_products" id="vm_cart_products">
+        <% if user_signed_in? %>
+
+            <% current_user.cartings.each do |carting| %>
+                <% if carting.status == "order" %>
+                    <% total_price += carting.item.price %>
+                    <div class="container">
+                      <div class="wrapper marg-bot sp">
+                        <div class="spinner"></div>
+                        <!-- Image line -->
+                        <div class="image">
+                          <%= image_tag carting.item.photos.first._photo.url(:thumb) %>
+                        </div>
+                        <div class="fleft">
+                          <div class="product_row">
+                            <span class="product_name"><%= carting.item.title %></span>
+
+
+                            <div class="clear"></div>
+                            <!--<span class="quantity">1&nbsp;x&nbsp;</span>-->
+                            <div class="prices" style="display:inline;">
+                        <span>
+                          <%= carting.item.price %>
+                          هزار تومان
+                        </span>
+
+                            </div>
+                          </div>
+                          <div class="product_attributes">
+                            <div class="vm-customfield-mod"><span class="product-field-type-V"></span><br></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                <% end %>
+            <% end %>
+        <% end %>
+        <%= session[:item] %>
+      </div>
+      <div class="total">
+        <% if total_price != 0 %>
+            <div class="total2"><span> مجموع :  </span><%= total_price %> هزار تومان</div>
+        <% else %>
+            <div class="total2"><span>سبد خرید شما خالی ست.</span></div>
+        <% end %>
+      </div>
+      <div class="show_cart">
+        <%= link_to "مشاهده سبد خرید", cartings_path %>
+      </div>
+    </div>
+  </div>
+  <h3>سبد خرید </h3>
+  <i class="fa fa-shopping-cart fa-flip-horizontal" style="color:#fb7133;"></i>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#vmCartModule').hover(
+                function () {
+                    $(this).find('#cart_list').slideDown();
+                },
+                function () {
+                    $(this).find('#cart_list').slideUp();
+                }
+        );
+    });
+</script>

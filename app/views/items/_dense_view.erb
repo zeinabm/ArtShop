@@ -1,0 +1,41 @@
+<div class = "dense_view">
+
+  <% @items.in_groups(4, false) do |items| %>
+      <div class="column" style="width:229px;">
+        <% items.each do |item|  %>
+        <div class="product-box">
+          <div class="browseImage">
+            <%= link_to (image_tag item.photos.first._photo.url), item_path(item.id), :class => "browseProductImage featuredProductImage", :border => "0" %></a>
+          </div>
+          <div class="fleft">
+            <div class="fright">
+              <div class="Title">
+                <span class="count">01.</span><a href="#" title=
+              <% item.title %>><%= item.title %></a></div>
+              <div class="Price">
+                <span class="sales"> <%= item.price %> هزار تومان </span>
+              </div>
+            </div>
+            <div class="feft">
+              <div class="Details">
+                <%= link_to "جزئیات", item, :class => "button" %>
+              </div>
+              <div class="addtocart-area">
+                <form method="post" class="product" action="index.php" id="addtocartproduct12">
+                  <input name="quantity" type="hidden" value="1"/>
+
+                  <div class="addtocart-bar2">
+                    <%= link_to "", cartings_path(:item_id => item, :quantity => "1"), :method => :post, :class => "addtocart-button" %>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+            <% end %>
+      </div>
+
+  <% end %>
+
+</div>

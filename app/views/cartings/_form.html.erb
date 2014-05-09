@@ -1,0 +1,29 @@
+<%= form_for(@carting) do |f| %>
+  <% if @carting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@carting.errors.count, "error") %> prohibited this carting from being saved:</h2>
+
+      <ul>
+      <% @carting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :item_id %><br>
+    <%= f.text_field :item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

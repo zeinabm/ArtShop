@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ArtShop</title>
+    <%= stylesheet_link_tag    	"application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag 	"application", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag    "jquery" %>
+    <%= javascript_include_tag    "jquery.flexslider" %>
+    <%= javascript_include_tag  "jquery.responsiveTabs.min" %>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+    <%= csrf_meta_tags %>
+
+  </head>
+
+  <body class="loading first">
+  <div class="body-top">
+    <div class="main">
+      <div id="header">
+        <%= render 'layouts/topmenu' %>
+        <div id="cart"> <%= render 'layouts/cart' %> </div>
+        <%= render 'layouts/search' %>
+        <div class="logoheader">
+          <a class="logo_h" href="">
+                  <span id="logo"><%= link_to (image_tag "logo.png"), root_path %>
+                  </span>
+          </a>
+        </div>
+        <%= render 'layouts/login_form' %>
+        <div class="moduletable-category">
+          <!--<script type="text/javascript">-->
+          <!--jQuery(document).ready(function(){
+//                jQuery('.droplist li.has-children ').hover(
+//                        function() {
+//                            jQuery(this).find('ul:first').stop(true, true).fadeIn("slow");
+//                        },
+//                        function() {
+//                            jQuery(this).find('ul:first').stop(true, true).delay(400).fadeOut("slow") ;
+//                        }
+//                );
+//            });-->
+          <!--</script>-->
+          <ul class="VMmenu level0 droplist" id="drop">
+            <% Category.all.each do |category| %>
+                <li id="vm-category-1" class="level0 VmClose">
+                  <%= link_to category.name, items_path(:category => category.name) %>
+                </li>
+            <% end %>
+          </ul>
+
+        </div>
+      </div>
+      <div id="content"> <%= yield %>  </div>
+
+    </div>
+  </div>
+  <script>
+      $(document).ready(function(){
+          $('.favorite-container').on('click', '.btn-fav', function(){
+              if($(this).hasClass('default')){
+                  $(this).removeClass('default');
+                  $(this).text('Favorited');
+
+              }
+              else {
+                  $(this).text('Favorite This');
+                  $(this).addClass('default');
+              }
+          });
+      }   );
+
+      $(document).ready(function(){
+          $('.moduletable_LoginForm').on('click', '#openLogin', function(){
+              $(this).closest('.moduletable_LoginForm').find('#login_pop').fadeToggle() ;
+          });
+      });
+
+      $(document).ready(function(){
+          $('.moduletable_LoginForm').on('click', '#closeLogin', function(){
+              $(this).closest('.moduletable_LoginForm').find('#login_pop').fadeToggle() ;
+          });
+      });
+
+  </script>
+  </body>
+</html>

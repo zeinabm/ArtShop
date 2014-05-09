@@ -1,0 +1,63 @@
+<% if user_signed_in? %>
+    <div class="moduletable_LoginForm">
+      <div class="poping_links">
+        <%= link_to "پروفایل", user_path(current_user), :id => "openReg" %>
+        <%= link_to "خروج", destroy_user_session_path, :method => :delete, :id => "openLogin" %>
+      </div>
+    </div>
+<% else %>
+    <div class="moduletable_LoginForm">
+      <div class="poping_links">
+
+        <%= link_to "ایجاد حساب کاربری", new_user_registration_path, :method => 'get', :id => "openReg"  %>
+        <!--<a id="openReg" href="#">ایجاد حساب کاربری</a>-->
+        <a id="openLogin">ورود</a>
+      </div>
+
+      <div id="login_pop" style="display: none;">
+        <%= render 'devise/sessions/signin' %>
+        <ul class="Forgot">
+          <li><a href="#">رمز عبور خود را فراموش کرده اید؟</a></li>
+          <li><a href="#">نام کاربری خود را فراموش کرده اید؟</a></li>
+        </ul>
+        <a href="javascript:;" onclick="this.blur();showThem('login_pop');return true;" id="closeLogin">&nbsp;</a></div>
+
+
+      <div id="reg_pop" style="display:none;">
+        <%= render 'registrations/popup_new' %>
+        <!--<form action="/virtuemart_48947/index.php/component/users/?task=registration.register" method="post" id="josForm" name="josForm" class="form-validate">-->
+          <!--<div class="popyjreg">-->
+            <!--<div class="popyjreg_ins">-->
+              <!--<label id="namemsg" for="name"> *&nbsp;Name: </label>-->
+              <!--<input type="text" name="jform[name]" id="name" size="40" value="" class="inputbox required" maxlength="50" aria-required="true" required="required">-->
+            <!--</div>-->
+            <!--<div class="popyjreg_ins">-->
+              <!--<label id="usernamemsg" for="username"> *&nbsp;Username: </label>-->
+              <!--<input type="text" id="username" name="jform[username]" size="40" value="" class="inputbox required validate-username" maxlength="25" aria-required="true" required="required">-->
+            <!--</div>-->
+            <!--<div class="popyjreg_ins">-->
+              <!--<label id="emailmsg" for="email"> *&nbsp;Email: </label>-->
+              <!--<input type="email" id="email" name="jform[email1]" size="40" value="" class="inputbox required validate-email" maxlength="100" aria-required="true" required="required">-->
+            <!--</div>-->
+            <!--<div class="popyjreg_ins">-->
+              <!--<label id="emailmsg2" for="email2"> *&nbsp;Verify Email: </label>-->
+              <!--<input type="email" id="email2" name="jform[email2]" size="40" value="" class="inputbox required validate-email" maxlength="100" aria-required="true" required="required">-->
+            <!--</div>-->
+            <!--<div class="popyjreg_ins">-->
+              <!--<label id="pwmsg" for="password"> *&nbsp;Password: </label>-->
+              <!--<input class="inputbox required validate-password" type="password" id="password" name="jform[password1]" size="40" value="" aria-required="true" required="required">-->
+            <!--</div>-->
+            <!--<div class="popyjreg_ins">-->
+              <!--<label id="pw2msg" for="password2"> *&nbsp;Confirm password: </label>-->
+              <!--<input class="inputbox required validate-passverify" type="password" id="password2" name="jform[password2]" size="40" value="" aria-required="true" required="required">-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<p class="information_td">Fields marked with an asterisk (*) are required.</p>-->
+          <!--<button class="button validate" type="submit">Create an Account</button>-->
+          <!--<input type="hidden" name="option" value="com_users">-->
+          <!--<input type="hidden" name="task" value="registration.register">-->
+          <!--<input type="hidden" name="76959527cb18dade1a2dbcfaf853b97f" value="1"></form>-->
+        <!--<a href="javascript:;" onclick="this.blur();showThem('reg_pop');return true;" id="closeReg">&nbsp;</a>-->
+      </div>
+    </div>
+<% end %>

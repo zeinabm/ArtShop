@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @user.lastname %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+
+
+<p>
+  <strong>store:</strong>
+  <% if !@user.store.blank? %>
+  <%= @user.store.name %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @user.avatar %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+
+  <%= current_user.role %>
+
+</p>
+<div style="width:60%; margin:auto;"><h1>سبد خرید</h1></div>
+<% @user.cartings.each do |carting| %>
+    <%= image_tag carting.item.photos.first._photo.url(:thumb) %>
+    <%= link_to "حذف", carting, :method => :delete %>
+    <br/>
+<% end %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

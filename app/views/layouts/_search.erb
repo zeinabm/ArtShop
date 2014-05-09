@@ -1,0 +1,16 @@
+<div id="search_box">
+  <div>
+    <div style="position: relative;">
+      <%= form_tag items_path, :method => 'get' do %>
+      <div>
+        <div style="position: relative; height: 20px; clear: both;">
+
+          <%= submit_tag :search, :name => nil, :class => "button" %>
+        </div>
+
+        <%= text_field_tag :search, params[:search], :class => "inputbox" %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<%= form_for(@item, :html => {:multipart => true}) do |f| %>
+    <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <table>
+      <thead></thead>
+      <tbody>
+      <tr>
+        <td><%= f.text_field :title %></td>
+        <td><%= f.label :title, "عنوان" %></td>
+      </tr>
+      <tr>
+        <td><%= f.number_field :price %></td>
+        <td><%= f.label :price, "قیمت" %></td>
+      </tr>
+      <tr>
+        <td><%= collection_select(:item, :category, Category.all, :name, :name,
+                                  {:prompt => 'انتخاب کنید'}, {:class => 'input'}) %></td>
+        <td><%= label_tag 'cat', 'نوع محصول   ' %></td>
+      </tr>
+      <%= f.fields_for :photos do |builder| %>
+          <tr>
+            <td>
+              <div class="uploadd-wrapper">
+                <div class="uploadd">
+                  <%= builder.file_field :_photo %>
+                </div>
+                <!--<button>select</button>-->
+              </div>
+            </td>
+            <td></td>
+          </tr>
+
+      <% end %>
+
+      <td><%= f.text_field :tag_list %></td>
+      <td><%= f.label :tag_list, "اضافه کردن تگ" %></td>
+      </tbody>
+    </table>
+
+    <div class="actions">
+
+      <%= link_to 'انصراف', items_path %>
+      <%= f.submit "افزودن محصول" %>
+    </div>
+<% end %>

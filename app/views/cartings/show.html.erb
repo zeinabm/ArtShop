@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @carting.item_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @carting.user_id %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @carting.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_carting_path(@carting) %> |
+<%= link_to 'Back', cartings_path %>

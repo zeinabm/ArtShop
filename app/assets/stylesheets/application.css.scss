@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree
+ *= require flexslider.css
+ */
+
+@font-face {
+  font-family: 'Persian-Shekari';
+  src: url("Persian-Shekari.eot?#"), url("Persian-Shekari.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Mitra';
+  src: url("BMitra.eot") format("eot"), url("BMitra.woff") format("woff"), url("BMitra.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Narm';
+  src: url("BNarm.eot") format("eot"), url("BNarm.woff") format("woff"), url("BNarm.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Morvarid';
+  src: url("BMorvarid.eot") format("eot"), url("BMorvarid.woff") format("woff"), url("BMorvarid.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Nazanin';
+  src: url("BNazanin.eot") format("eot"), url("Bnazanin.woff") format("woff"), url("BNazanin.ttf") format("truetype");
+}
+
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none !important;
+}
+
+p, ol, ul, td {
+  font-family: 'Nazanin', verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+/* display: table; */
+}
+
+.field_with_errors input {
+  border: 1px solid red !important;
+}
+
+#error_explanation {
+  width: 464px;
+  border: 2px solid rgba(7, 7, 7, 0.59);
+  padding: 7px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-right: 33px;
+  background: none;
+  float: right;
+  position: relative;
+}
+
+#error_explanation h2 {
+  text-align: center;
+  font-weight: normal;
+  padding: 6px 5px 6px 15px;
+  font-size: 15px;
+  margin: -7px;
+  margin-bottom: 10px;
+  background: rgba(7, 7, 7, 0.59);
+  color: #fff;
+  border-radius: 0;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: none;
+}
+
+label, .input, input {
+  width: 12em;
+}
+
+
+
+
+#banner-slider .slides img {
+  width: 100%;
+  display: block;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px 6px 6px 6px;
+}

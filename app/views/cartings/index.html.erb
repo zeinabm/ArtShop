@@ -1,0 +1,88 @@
+<div class="order_info">
+
+  <h1>مشخصات سفارش </h1>
+  <table>
+    <thead>
+    <tr>
+      <td>قیمت</td>
+
+      <td>تعداد</td>
+      <td>حذف</td>
+      <td>نام</td>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% @cartings.each do |carting| %>
+    <% if carting.status == "order" %>
+            <tr>
+              <td><%= carting.item.price * carting.quantity %></td>
+              <td>
+                <%= carting.quantity %></td>
+              <td>
+                <%= link_to "حذف",  carting, method: :delete%>
+              </td>
+              <td>
+                <%= link_to (image_tag carting.item.photos.first._photo.url(:thumb)), item_path(carting.item) %>
+              </td>
+
+            </tr>
+    <% end %>
+    <% end %>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="order_info address">
+  <h1>تکمیل فرایند خرید</h1>
+  <div class="inside">
+
+  <%= label_tag "لطفا آدرس خود را کامل و دقیق وارد کنید." %>
+  <%= text_area_tag :delivery_address %>
+
+    <div class="actions purchase_actions">
+
+      <%= link_to "انصراف",'root' %>
+      <%= link_to "پرداخت",'cartings/finalize_purchase' %>
+    </div>
+
+   </div>
+</div>
+
+
+
+
+
+
+
+<!--<table>-->
+  <!--<thead>-->
+  <!--<tr>-->
+    <!--<th>Item</th>-->
+    <!--<th>User</th>-->
+    <!--<th>Quantity</th>-->
+    <!--<th></th>-->
+    <!--<th></th>-->
+    <!--<th></th>-->
+  <!--</tr>-->
+  <!--</thead>-->
+
+  <!--<tbody>-->
+  <!--<% @cartings.each do |carting| %>-->
+      <!--<tr>-->
+        <!--<td><%= carting.item_id %></td>-->
+        <!--<td><%= carting.user_id %></td>-->
+        <!--<td><%= carting.quantity %></td>-->
+        <!--<td><%= link_to 'Show', carting %></td>-->
+        <!--<td><%= link_to 'Edit', edit_carting_path(carting) %></td>-->
+        <!--<td><%= link_to 'Destroy', carting, method: :delete, data: {confirm: 'Are you sure?'} %></td>-->
+      <!--</tr>-->
+  <!--<% end %>-->
+  <!--</tbody>-->
+<!--</table>-->
+
+<!--<br>-->
+
+<!--<%= link_to 'New Carting', new_carting_path %>-->
+

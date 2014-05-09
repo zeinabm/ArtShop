@@ -1,0 +1,95 @@
+<div class="new-form">
+  <h1 id="title">ثبت نام </h1>
+
+  <%= form_for @user, :url => '/users', :method => :post do |f| %>
+      <%= devise_error_messages! %>
+
+      <table class="register">
+        <thead></thead>
+        <tbody>
+        <tr>
+          <td><%= f.email_field :email, autofocus: true %></td>
+          <td><span> * </span><%= f.label :email, "ایمیل" %></td>
+
+        </tr>
+        <tr>
+          <td><%= f.password_field :password, autocomplete: "off" %></td>
+          <td><span> * </span><%= f.label :password, "رمز عبور" %></td>
+
+        </tr>
+        <tr>
+          <td><%= f.password_field :password_confirmation, autocomplete: "off" %></td>
+          <td><span> * </span><%= f.label :password_confirmation, "تکرار رمز عبور" %></td>
+
+        </tr>
+        <tr>
+          <td><%= f.text_field :name %></td>
+          <td><span> * </span><%= f.label :name, "نام" %></td>
+        </tr>
+        <tr>
+          <td><%= f.text_field :lastname %></td>
+          <td><%= f.label :lastname, "نام خانوادگی" %></td>
+        </tr>
+        <tr>
+          <td><%= f.phone_field :phone %></td>
+          <td><%= f.label :phone, "تلفن" %></td>
+        </tr>
+        <tr>
+          <td><%= f.text_area :address, :rows => 3 %></td>
+          <td><%= f.label :address, "آدرس " %></td>
+        </tr>
+
+        <tr>
+          <td><label>همچنین قصد دارم یک فروشگاه ایجاد کنم</label></td>
+          <td><%= f.check_box :role, {:id => "seller-check-box"}, "seller", "user" %></td>
+        </tr>
+
+        </tbody>
+      </table>
+
+      <%= f.fields_for :store do |field| %>
+          <%= render 'stores/info', {:f => field} %>
+      <% end %>
+
+      <div class="actions" id="first-btns">
+        <%= link_to 'انصراف', items_path %>
+        <%= f.submit "ثبت نام " %>
+      </div>
+
+  <% end %>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('table').on('click', '#seller-check-box', function () {
+            if ($(this).is(':checked')) {
+                $('.store').fadeTo("slow", 1);
+            }
+            else {
+                $('.store').fadeTo("slow", 0);
+            }
+        });
+    });
+    $(document).ready(function(){
+        if($('#seller-check-box').is(':checked')) {
+            $('.store').fadeTo("slow", 1);
+        }
+        else {
+            $('.store').fadeTo("slow", 0);
+        }
+    });
+//    $(document).ready(function(){
+//        $('.new-form').on('click', '#continue', function(event){
+//            event.preventDefault();
+//            $('.register').hide();
+//            $('.store').show();
+//            $('#title').text('ایجاد فروشگاه')
+//            $('#first-btns').show();
+//            $('#second-btns').hide();
+//        });
+//    });
+</script>
+
+
+

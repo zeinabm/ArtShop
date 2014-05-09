@@ -1,0 +1,37 @@
+<div class="popup-reg-form">
+
+  <%= form_for :user, :url => '/users', :method => :post do |f| %>
+
+      <table class="register">
+        <thead></thead>
+        <tbody>
+        <tr>
+          <td><%= f.email_field :email, autofocus: true %></td>
+          <td><span> * </span><%= f.label :email, "ایمیل" %></td>
+
+        </tr>
+
+
+        <tr>
+          <td><%= f.password_field :password, autocomplete: "off" %></td>
+          <td><span> * </span><%= f.label :password, "رمز عبور" %></td>
+
+        </tr>
+        <tr>
+          <td><%= f.password_field :password_confirmation, autocomplete: "off" %></td>
+          <td><span> * </span><%= f.label :password_confirmation, "تکرار رمز عبور" %></td>
+
+        </tr>
+
+        </tbody>
+      </table>
+
+      <div class="actions" id="first-btns">
+        <%= link_to 'انصراف', items_path %>
+        <%= f.submit "ثبت نام " %>
+      </div>
+
+  <% end %>
+
+</div>
+

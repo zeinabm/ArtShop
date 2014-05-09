@@ -1,0 +1,1129 @@
+/*
+ * @author ( Angie Radtke )
+*/
+
+/* not ready */
+
+/* ##########################  general  ########################### */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	height:100%;
+}
+p {margin:0 0 15px 0;}
+.item-page {overflow:hidden; position:relative;}
+
+.push {
+	height:66px;
+	}
+
+a {
+	color:#777;
+	outline:none;
+	text-decoration:none;
+	}
+
+a:hover {
+	text-decoration:underline;
+	outline:none;
+	}
+
+input:focus
+{
+
+}
+
+fieldset
+{
+	border:0;
+	padding:0 0 0 0;
+	margin:0;
+}
+
+.article-info dd span
+{
+	color:#444;
+	border-right:solid 0px;
+	background:#eee
+}
+
+
+
+/********************registration***********************************/
+.registration, .reset, .remind {
+overflow:hidden;
+position:relative;
+}
+
+.contactcontacts .contact-form legend {
+    display: none;
+}
+
+legend {
+    color: #9B9791;
+}
+/********************************************************************/
+
+.moduletable-slider { width:940px; height:624px;}
+/* ++++++++++++++  lists, skiplinks  ++++++++++++++ */
+.actions {/* height:30px; */ /* position: absolute; */ /* top: 260px; */ /* right:5px; */ list-style:none;width: 100%;width: 300px;/* float: left; */margin: 0px 125px 0 0;padding-bottom: 22px;}
+.actions li {float:right; padding:0 5px 0 0;}
+.spacing {margin-bottom:26px; float:left; margin-right:20px;}
+#header ul.skiplinks
+{
+	width:100%;
+	text-align:left;
+	background:none;
+	z-index:20000;
+	top:0;
+	display:inline;
+	padding:0
+}
+
+#header ul.skiplinks li a.u2:active,
+#header ul.skiplinks li a.u2:focus
+
+{
+	background:#095197 !important;
+	color:#fff !important;
+	border:solid 1px;
+	top:0 !important;
+	z-index:10000;
+	right:auto;
+	left:0 !important;
+	display:block
+}
+
+
+/* ++++++++++++++  fontsize  ++++++++++++++ */
+
+#fontsize
+{
+	 display:inline;
+
+
+}
+
+#fontsize p a:link,
+#fontsize p a:visited
+{
+	color:#222;
+	border-right:solid 1px #ccc
+}
+
+
+#fontsize p a.larger,
+#fontsize p a.reset,
+#fontsize p a.smaller
+{
+	padding-left:5px;
+	padding-right:5px;
+	text-decoration:none;
+	margin:0;
+}
+
+
+
+#fontsize p a:hover,
+#fontsize p a:active,
+#fontsize p a:focus
+{
+	background:#095197 !important;
+	color:#fff
+}
+
+#fontsize h3
+{
+	color:#222;
+	font-weight:bold
+}
+
+/* ##########################  contentarea  ########################### */
+
+
+#contentarea,
+#contentarea2
+{
+	background:#fff
+}
+
+.categories-list, .category-list, .blog
+{
+        padding:0px;
+		position:relative;
+}
+/* ##########################  breadcrumbs  ########################### */
+
+#breadcrumbs
+{
+	color:#333;
+}
+
+#breadcrumbs span
+{
+	color:#333;
+}
+
+#breadcrumbs span a:link,
+#breadcrumbs span a:visited
+{
+	background:#fff;
+	color:#333;
+}
+
+#breadcrumbs span a:hover,
+#breadcrumbs span a:active,
+#breadcrumbs span a:focus
+{
+	background:#095197;
+	color:#fff;
+}
+
+
+/* ##########################  navigation column  ########################### */
+
+.module_content
+{
+	border:solid 1px #ddd;
+
+}
+.moduletable_js
+{
+	border:solid 0px #ddd;
+}
+
+#right .moduletable_js
+{
+	border:0
+}
+
+#nav h3
+{
+  border-bottom:solid 1px #ddd;
+  color:#555
+}
+
+h3.js_heading
+{
+	border-bottom:solid 1px #ddd;
+	background:#eee;
+}
+
+h3.js_heading span.backh
+{
+	border:solid 0px #000
+}
+
+h3.js_heading span.backh1
+{
+
+}
+
+h3.js_heading a
+{
+	border:0
+}
+
+h3.js_heading a img
+{
+	border:0
+}
+
+h3.js_heading a.opencloselink:hover,
+h3.js_heading a.opencloselink:active,
+h3.js_heading a.opencloselink:focus
+{
+	background:none
+}
+
+
+#right h3 span.backh
+{
+
+}
+
+#right h3 span.backh2
+{
+	background:#fff;
+	color:#555;
+	border-bottom:solid 1px #ddd
+}
+
+#right h3 span.backh3
+{
+padding-left:0
+}
+
+h3.js_heading a:link,
+h3.js_heading a:visited,
+h3.js_heading a:hover,
+h3.js_heading a:active,
+h3.js_heading a:focus
+{
+
+}
+
+#nav h3.js_heading a:focus
+{
+
+}
+
+#nav form
+{
+	color:#000;
+}
+
+#nav form a:hover,
+#nav form a:active,
+#nav form a:focus
+{
+	color:#fff;
+	background:#095197;
+	text-decoration:none
+}
+
+
+
+
+#main th a:hover,
+#main th a:active,
+#main th a:focus
+{
+	background:#333;
+	color:#fff;
+}
+
+
+.column-1,
+.column-2
+{
+	border: solid 0px ;
+}
+
+.item-separator
+{
+	border: solid 0px #333333;
+}
+
+#main ul li
+{
+
+}
+
+.small
+{
+	border:solid 0;
+}
+
+ul#archive-items li.row0,
+ul#archive-items li.row1
+{
+	border-bottom:solid 1px #ddd 
+}
+
+.archive #adminForm fieldset
+{
+	border:0;
+	padding:0;
+	margin:20px 0
+}
+/* ++++++++++++++  images  ++++++++++++++ */
+
+.image-left
+{
+	padding:2px;
+}
+
+.image-right
+{
+	border:solid 1px #ddd;
+	padding:2px
+}
+
+/* ++++++++++++++  leading  ++++++++++++++ */
+
+.items-leading, .item-page
+{
+	padding: 0;
+
+}
+
+
+/* ++++++++++++++++++++ headings +++++++++++++ */
+#main h1
+{ 
+	border-bottom:solid 1px #ddd;
+	background:none;
+	color:#000;
+
+
+}
+
+
+#main .blog  h1,
+#main .blog-featured  h1
+{
+	color:#0d4c89;
+	border-top:solid 1px #ddd;
+	border-bottom:solid 1px #ddd;
+	margin-top:-1px !important
+
+}
+
+/* h1 on frontpage */
+
+
+
+#main h2
+
+{
+	color:#3f3f3f;
+	background:none;
+	font-weight:normal;
+	text-shadow:none;
+
+}
+#main h2 a
+{
+	color:#3f3f3f;
+	
+	
+}
+
+.box-top {
+	background:url(line-hor.gif) bottom left repeat-x;
+	width:100%;
+	overflow:hidden;
+}
+
+.separator1 {
+	background:url(line-ver.gif) repeat-y 319px 0;
+	}
+.separator2 {
+	background:url(line-ver.gif) repeat-y 639px 0;
+	}
+.box-top h2 {
+	background:#ebebeb url(line-hor.gif) bottom left repeat-x;
+	text-align:center;
+	padding:20px 50px 20px 50px;
+	}
+.box-top .indent {
+	text-align:center;
+	padding:30px 40px 50px 40px;
+	}
+
+/* ++++++++++++++  readmore  ++++++++++++++ */
+
+
+
+/* ++++++++++++++  icons  ++++++++++++++ */
+
+.actions img {
+	border:0;
+	}
+
+/* ++++++++++++++  items-more  ++++++++++++++ */
+
+#main .items-more h3 {
+	border-bottom:solid 1px #ddd;
+	border-top:solid 1px #ddd;
+	color:#444;
+}
+
+#main .items-more ol
+{
+	color:#000;
+}
+
+#main .items-more ol li a
+{
+	background:#FFFFFF url(blog_more.gif) no-repeat 0px center;
+	color:#095197
+}
+
+#main .items-more ol li a:hover,
+#main .items-more ol li a:active,
+#main .items-more ol li a:focus
+{
+	background: #095197 url(blog_more_hover.gif) no-repeat 0px center;
+	color:#fff;
+}
+
+/* ++++++++++++++  pagination  ++++++++++++++ */
+
+#main .pagination
+{
+	border-top:solid 1px #ddd;
+}
+
+/* ++++++++++++++  article index  ++++++++++++++ */
+
+table.contenttoc
+{
+	border:solid 1px #ccc;
+}
+
+
+/* ##########################  right column   ########################### */
+
+
+
+
+/* ++++++++++++++  button for closing right column  ++++++++++++++ */
+#close span
+{
+	color:#000;
+}
+
+/* ##########################  modules  ########################### */
+
+/* ++++++++++++++  mostread, latest news ++++++++++++++ */
+
+.mostread li a:link,
+.mostread li a:visited,
+.latestnews li a:link,
+.latestnews li a:visited
+{
+	background: url(personal/arrow2_grey.png) 2px 7px  no-repeat ;
+}
+
+.mostread li a:hover,
+.latestnews li a:hover,
+.mostread li a:active,
+.latestnews li a:active,
+.mostread li a:focus,
+.latestnews li a:focus
+{
+	background:#555 url(arrow_white_grey.png) 2px 7px  no-repeat !important;
+}
+
+/* ++++++++++++++  newsfeed  ++++++++++++++ */
+
+ul.newsfeed
+{
+	border:solid 0px #000;
+}
+
+.newsfeed-item
+{
+	border-bottom:solid 1px #ddd;
+}
+
+.newsfeed-item h5 a
+{
+
+}
+
+/* ++++++++++++++  newsflash  ++++++++++++++ */
+/* newsflash horizontal */
+
+ul.newsflash-horiz
+{
+	background:#F5F5F5 url(nature/box.png) repeat-x;
+	border:1px solid #EEEEEE;
+}
+
+ul.newsflash-horiz li
+{
+	border:solid 0px #eee;
+	background:#f5f5f5;
+}
+
+ul.newsflash-horiz li h4
+{
+	font-family: 'Titillium Maps', Arial;
+}
+
+
+/* newsflash vertical */
+
+.newsflash-vert
+{
+
+}
+
+/* ++++++++++++++  banner  ++++++++++++++ */
+
+#content .bannergroup {
+	background:#dfdfdf url(line-hor.gif) top left repeat-x;
+	overflow:hidden;
+	padding:23px 0 22px 14px;
+	}
+	
+#content .banneritem {
+	border:0;
+	float:left;
+	font-size:0px;
+	line-height:0px;
+	}
+
+#content .banneritem a {
+	background:none;
+	}
+
+#content .banneritem a img {
+	background:none;
+	border:0
+	}
+
+
+
+/* ++++++++++++++  category-module  ++++++++++++++ */
+
+#right .category-module h4 a:link,
+#right .category-module h4 a:visited
+{
+	color:#0D4C89
+}
+
+#right .category-module h4 a:hover,
+#right .category-module h4 a:active,
+#right .category-module h4 a:focus
+{
+	color:#fff
+}
+
+
+.category-module li
+{
+	border-bottom:solid 1px #ddd;
+}
+
+.category-module li li
+{
+	border:0
+}
+
+
+
+/* ##########################  search   ########################### */
+
+.searchintro img
+{
+	border:0px
+}
+
+.inputbox:focus
+{
+	
+}
+
+.word
+{
+	
+}
+input, textarea {outline:none;}
+.word input
+{
+	width:170px;
+	margin-top:0px;
+	background:#f9f9f9;
+	height:23px;
+	line-height:23px;
+	border:solid 1px #e5e5e5;
+	float:left;
+	margin-top:0px;	
+	padding:7px 10px;
+	color:#919191;
+	margin-right:10px;
+}
+
+.only
+{
+
+}
+
+.phrases
+{
+
+}
+
+/* ++++++++++++++  selects  ++++++++++++++ */
+.phrases .inputbox
+{
+	background:#fff;
+	color:#000;
+	height:20px;
+}
+
+.phrases .inputbox option
+{
+	background:#f5f5f5;
+	border-bottom:solid 1px #ccc;
+}
+
+.phrases .inputbox option a:hover
+{
+	background:#C00;
+	border-color:#CFD0D6;
+	color:#fff;
+}
+
+/* ++++++++++++++   search results	++++++++++++++++++ */
+
+dl.search-results
+{
+
+}
+
+dl.search-results dt.result-title
+{
+	font-size:18px; line-height:18px; color:#333;
+}
+
+dt.result-title a {font-size:18px; line-height:18px; color:#333; font-weight:bold;  text-decoration:none; text-transform:capitalize;}
+dt.result-title a:hover {text-decoration:underline;}
+
+dl.search-results dd.result-created
+{
+	color:#ee781c;
+	font-size:11px;
+}
+dd.result-category {}
+/* ##########################  forms   ########################### */
+
+
+/* ++++++++++++++  form validation  ++++++++++++++ */
+
+.invalid
+{
+	border-color:red !important;
+	background:none!important;
+}
+
+label.invalid
+{
+	color:red;
+}
+
+
+/* ##########################  user profile  ########################### */
+#users-profile-core,
+#users-profile-custom
+{
+	
+}
+
+#member-profile fieldset
+{
+	
+}
+
+
+/* ##########################  tables   ########################### */
+table
+{
+
+}
+
+tbody
+{
+
+}
+
+tr.odd,
+.cat-list-row1
+{
+	background:url(news.gif)  repeat-x;
+}
+
+table.newsfeeds td,
+table.weblinks td
+{
+
+}
+
+table.weblinks th,
+table.newsfeeds th,
+table.category th,
+table.jlist-table th
+{
+	background:#444 ;
+}
+
+table.weblinks th a,
+table.newsfeeds th a,
+table.category th a,
+table.jlist-table th a,
+table.weblinks th,
+table.newsfeeds th,
+table.category th,
+table.jlist-table th
+{
+	color:#fff
+}
+
+
+td.table_footer
+{
+	background:#ddd url(table_footer.gif) bottom left repeat-x;
+}
+
+td.counter
+{
+
+}
+
+td.num,
+td.hits
+{
+
+}
+
+td p
+{
+
+}
+
+table.category th a img
+{
+	border:solid 0px ;
+}
+
+/* for opera */
+tr, td
+{
+	border:none
+}
+
+
+#main table.moduletable td,
+#main table.moduletable tr
+{border:0;}
+fieldset.filters
+{
+	border:solid 0px #ddd;
+
+}
+
+/* ##########################  contacts   ########################### */
+
+.contactcontacts form
+{
+	background:none;
+	color:#fff;
+	padding-left:2px;
+}
+
+.contactcontacts input
+{
+	background:#fff;
+	border:0;
+	color:#697575;
+}
+
+.contact-links {padding:20px;}
+.contactcontacts input.invalid,
+.contactcontacts textarea.invalid
+{
+	border:solid 1px red;
+}
+
+.contact-form .col-1 {width:40%; margin-right:9%;}
+.contact-form .col-2 {width:40%;}
+.contact-links ul li a {color:#ef8200 !important;}
+.contact label.invalid
+{
+	color:red;
+}
+
+
+/* ++++++++++++++  Error Message contact form  ++++++++++++++ */
+
+p.error {
+	color:#044b63;
+	background:#eee;
+	border-top:3px solid #044b63;
+	border-bottom:3px solid #044b63;
+	}
+
+body.contentpane {
+	background:#fff;
+	}
+#faded {width:460px; height:368px;}
+#faded .pagination {padding:0; bottom:0; position:absolute;}
+#faded .pagination li a {
+	background: url(bullets.png) no-repeat scroll -16px 0 transparent;
+    border: 0 none;
+    display: block;
+    float: left;
+    height: 14px;
+    margin-right: 2px;
+    text-indent: -9999px !important;
+    width: 14px;
+}
+#faded .pagination li a:hover, #faded .pagination li.current a {background-position:0 0;}
+#faded .pagination li {float:left;}
+#faded ul {width:460px;}
+
+#bottom a img
+{
+	border:0
+}
+
+.box ul{padding-left:0}
+
+.box1{border-right:solid 1px #ccc;}
+.box3{border-left:solid 1px #ccc;}
+#bottom  ul li a {
+	background-image:none;
+	padding-left:0;
+}
+
+
+/* ##########################  editor  ########################### */
+
+.contentpaneopen_edit img
+{
+	border:0
+}
+
+form.editor fieldset
+{
+	border:solid 1px #ccc;
+}
+
+
+/* ++++++++++++++  edit  ++++++++++++++ */
+
+form#adminForm
+{
+	border:solid 0px #000
+}
+
+.edit form#adminForm fieldset
+{
+	border:solid 1px #ddd
+}
+.edit form#adminForm  legend
+{
+	font-weight:bold
+}
+/* ++++++++++++++  tooltip  ++++++++++++++ */
+.tip-wrap { z-index:9999!important; }
+
+.tip
+{
+	border:solid 1px #e7e7e7;
+	background:#efefef;
+	z-index:999;
+	padding:5px 10px 5px 10px;
+}
+
+
+/*-------------------------------*/
+
+
+table.pagenav,
+table.pagenav tr,
+table.pagenav td
+{border:0 !important}
+
+.cat-children ul ul,  
+.categories-list ul ul
+{
+	list-style-type:none; 
+
+}
+
+.cat-children ul ul ul,
+.categories-list ul ul ul
+{
+	
+
+}
+.categories-list .category-desc ul li
+{list-style-type:square
+}
+
+/* contact  plain */
+#main .contact h3
+{
+	border-bottom:solid 1px #ddd;
+	margin: 20px 0
+}
+
+.form-required
+{
+	font-weight:bold;
+	margin:10px 0;
+	padding:2px 0px
+
+}
+
+.contactcontacts .inputbox,
+.contactcontacts input.required,
+.registration input,
+.profile-edit input,
+.login-fields input,
+.remind input,
+.reset input,
+.contactcontacts #jform_contact_message
+{
+	background:#f9f9f9;
+	border:solid 1px #e5e5e5;
+	padding:0px 10px;
+	color:#919191;
+	font-family:Arial, Helvetica, sans-serif; font-size:13px;
+	height:27px; line-height:27px;
+	
+}
+#username, #password {width:240px;}
+.login .button {margin-top:24px;}
+.contact-email .inputbox, .contact-form input.required {width:418px; height:27px; line-height:27px; outline:none;}
+#contact-text, .contact-form textarea.required {max-width:514px; width:514px; height:151px; min-height:151px; overflow:auto; color:#fff; line-height:18px !important; padding:10px !important;}
+
+.contact-mess {margin:70px 0 10px -220px !important;}
+.contact-mess div.email_copy {overflow:hidden;}
+.contact-contactinfo p {margin-bottom:3px; overflow:hidden;}
+.jicons-icons {float:left; width:30px;}
+address {overflow:hidden; font-style:italic;}
+.profile-edit select
+{
+	padding:0px;
+	border:solid 1px #ccc;
+	background:#f5f5f5;
+
+}
+.profile-edit select option
+{
+	padding:3px
+
+}
+/* contact  slider */
+
+.panel
+{
+	border:solid 1px #ddd;
+	margin-top:-1px;
+	
+
+}
+.pane-slider {overflow:hidden; position:relative;}
+#main .contactcontacts .panel h3
+{
+	margin:0px 0 0px 0;
+	padding: 0;
+	background:#eee;
+	border:0
+}
+.panel h3 a
+{
+	color:#515151;
+	display:block;
+	text-decoration:none;
+	padding:4px 0 0px 10px;
+}
+
+
+.panel h3.pane-toggler a
+{
+	background:#f5f5f5 url(slider_plus.png) right  top no-repeat;
+}
+.panel h3.pane-toggler-down a
+{
+	background:#f5f5f5  url(slider_minus.png) right  top no-repeat;
+}
+
+.pane-slider
+{
+	border:solid 0px;
+	padding:0px 20px !important;
+	margin:0;
+}
+
+.panel .contact-form,
+.panel  .contact-miscinfo
+{
+	 
+}
+.contact-email {margin:10px 0 20px;}
+.contactcontacts .panel .contact-form form,
+.contactcontacts .panel .contact-address
+{
+	margin:20px 0 0 0
+}
+
+
+
+/* image upload modal */
+
+/*****************sub-pages*****************/
+.text-indent {
+    padding: 0 0px 30px 0;
+}
+#article .col-1 {
+    margin-right: 2%;
+    width: 32%;
+	padding:0;
+}
+#article img {margin-bottom:20px;}
+#article .col-2 {
+    width: 32%;
+	margin-right: 2%;
+	padding:0;
+}
+#article .col-3 {
+    width: 30%;
+	border:0;
+	padding:0;
+}
+.sub-title {color:#515151;}
+.indent {padding:5px 0px;}
+
+.mar-r2 {margin:0 20px 0 0;}
+
+.one_half, .one_third, .two_third, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {
+    float: left;
+    margin-right: 2%;
+    position: relative;
+}
+
+.one_half {
+    width: 48%;
+}
+.alignleft {float:left;}
+
+ul.partners li {
+    background: none repeat scroll 0 0 transparent;
+    padding: 0 0px 20px 0;
+	overflow:hidden;
+}
+ul.partners li img {padding:0 15px 0 0;}
+
+/*******************************************************************/
+h3, h1, h2 {
+	font-family: 'BBadr','Mitra','Open Sans', sans-serif;
+	font-size: 25px;
+	line-height: 18px;
+	font-weight: 400; 
+	color:#fff;
+	padding: 9px 35px 9px 35px; 
+	margin:0 0 0px 0; 
+	background: url(bg_h_con.png) 0 0 repeat-x;
+	position:relative; 
+	margin: 0px 0 30px;
+	border-radius: 5px;
+}
+#left h3,#left h1,#left h2 {background: url(bg_h_left.png) 0 0 repeat-x;}
+.contact-page .left h3 {margin-bottom:15px;}
+
+.it {font-style:italic;}
+.link-1 {font-style:italic; color:#ec8100 !important;}
+.link-2 {color:#fff !important; font-weight:bold ; font-size:13px; line-height:30px; padding-top:1px; display:inline-block;}
+
+.extra-box {overflow:hidden;}
+

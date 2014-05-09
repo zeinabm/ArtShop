@@ -1,0 +1,16 @@
+<div id="topmenu">
+  <div class="moduletable">
+    <ul id="nav_top" class="sf_menu">
+      <% if current_user && current_user.role == 'seller' %>
+        <li><%= link_to "محصول جدید", new_item_path %></li>
+      <% else %>
+        <li><%= link_to "ایجاد فروشگاه", new_store_path %></li>
+      <% end %>
+      <li><a href="#">درباره ما</a></li>
+      <li><a href="#">درباره ما</a></li>
+      <li><a href="#">درباره ما</a></li>
+
+    </ul>
+
+  </div>
+</div>

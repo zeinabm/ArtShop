@@ -1,0 +1,31 @@
+<%= form_for(@store) do |f| %>
+
+    <div class="new-form new-store-form">
+      <h1> فروشگاه جدید</h1>
+      <% if @store.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@store.errors.count, "error") %> prohibited this store from being saved:</h2>
+
+            <ul>
+              <% @store.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <%= render 'stores/info', :f => f %>
+
+      <div class="actions">
+        <%= link_to 'انصراف', root_path %>
+        <%= f.submit "ایجاد فروشگاه" %>
+      </div>
+
+    </div>
+<% end %>
+
+<script>
+    $(document).ready(function () {
+        $('.new-form').find('.store').show();
+    });
+</script>

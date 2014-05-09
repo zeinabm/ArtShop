@@ -1,0 +1,111 @@
+<div id="listing-body">
+  <p id="notice">
+    <% notice %></p>
+
+  <div style="display: table;">
+    <div style="float:left; padding-right: 30px; padding-bottom: 300px;">
+
+
+      <div id="overview" class="" style="width:420px;">
+        <div class="favorites-nag">
+          <div class="favorite-container">
+
+            <% if user_signed_in? %>
+                <%= link_to "علاقه مندی", favorites_path(:item_id => @item, :user_id => current_user), :method => :post, :class => "default btn-fav" %>
+            <% else %>
+                <%= link_to "علاقه مندی", favorites_path(:item_id => @item), :method => :post, :class => "default btn-fav" %>
+            <% end %>
+          </div>
+          <div class="nag-message">
+            <h4>ازاین محصول خوشتان آمده است؟</h4>
+          </div>
+        </div>
+        <section id="overviewFirstDiv">
+          <p id="title" style="font-family: 'Mitra'; font-size: 30px;"><%= @item.title %></p>
+          <button id="askQ">Ask A Question</button>
+          <div id="offerDetails">
+            <span id="price"> <%= @item.price %> هزار تومان </span><br/>
+            <label>تعداد</label>
+            <select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div id="itemOverview">
+            <h4>نمای کلی</h4>
+            <li>یه جمله</li>
+            <li>یه جمله در مورد مواد اولیه</li>
+            <li>یه جمله در مورد نحوه ارسال</li>
+            <li>مثلا از چه شهری قراره ارسال شه</li>
+
+          </div>
+        </section>
+        <section>
+          <form>
+            <%= link_to "اضافه به سبد خرید", cartings_path(:item_id => @item, :quantity => "1"), :remote => true, :method => :post, :class => "addtocart-button" %>
+          </form>
+        </section>
+      </div>
+    </div>
+    <div class="slider-wrapper">
+      <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <% @item.photos.each do |photo| %>
+                <li><%= image_tag photo._photo.url %></li>
+            <% end %>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  <%= render 'tabs' %>
+  </div>
+
+  <div style="position: relative;">
+    <%= link_to 'Edit', edit_item_path(@item) %> |
+    <%= link_to 'Back', items_path %>
+  </div>
+</div>
+
+<script>
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation:"slide",
+            smoothHeight:true,
+            slideshow:false,
+            controlNav:false,
+            start:function (slider) {
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#horizontalTab').responsiveTabs({
+            rotate:false,
+            startCollapsed:'accordion',
+            collapsible:'accordion',
+            setHash:true
+        });
+
+        $('#start-rotation').on('click', function () {
+            $('#horizontalTab').responsiveTabs('active');
+        });
+        $('#stop-rotation').on('click', function () {
+            $('#horizontalTab').responsiveTabs('stopRotation');
+        });
+        $('#start-rotation').on('click', function () {
+            $('#horizontalTab').responsiveTabs('active');
+        });
+        $('.select-tab').on('click', function () {
+            $('#horizontalTab').responsiveTabs('activate', $(this).val());
+        });
+
+    });
+</script>

@@ -1,0 +1,27 @@
+
+
+<section class = "slider2">
+<div class="flexslider" id="banner-slider">
+  <ul class="slides">
+    <li><%= image_tag "a.jpg" %></li>
+    <li><%= image_tag "g.jpg" %></li>
+    <li><%= image_tag "b.jpg" %></li>
+    <li><%= image_tag "c.jpg" %></li>
+
+  </ul>
+</div>
+  </section>
+
+<script>
+    $(window).load(function(){
+        $('#banner-slider').flexslider({
+            animation: "fade",
+            slideshow: true,
+            directionNav: true,
+            pauseOnHover: true,
+            start: function(slider){
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
