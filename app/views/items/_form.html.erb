@@ -22,7 +22,7 @@
         <td><%= f.label :price, "قیمت" %></td>
       </tr>
       <tr>
-        <td><%= collection_select(:item, :category, Category.all, :name, :name,
+        <td><%= collection_select(:item, :category_id, Category.all, :id, :name,
                                   {:prompt => 'انتخاب کنید'}, {:class => 'input'}) %></td>
         <td><%= label_tag 'cat', 'نوع محصول   ' %></td>
       </tr>
@@ -33,7 +33,6 @@
                 <div class="uploadd">
                   <%= builder.file_field :_photo %>
                 </div>
-                <!--<button>select</button>-->
               </div>
             </td>
             <td></td>

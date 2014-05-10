@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  #after_action  :add_to_category, only: [:category]
   # GET /items
   # GET /items.json
 
@@ -9,8 +10,10 @@ class ItemsController < ApplicationController
       @items = Item.tagged_with(params[:search])
       @items ||= Item.find_by_title(params[:search])
       @page_title = params[:search]
+
     elsif params[:category]
-      @items = Item.where(:category => params[:category]).order("created_at DESC").paginate(:per_page => 12, :page => params[:page])
+      @category = Category.where(:name => params[:category]).first
+      @items = @category.items.order("created_at DESC").paginate(:per_page => 12, :page => params[:page])
       @page_title = params[:category]
     else
       @items = Item.all.limit(6).order("items.created_at DESC")
@@ -92,9 +95,13 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def add_to_category
+    @category = Category.find(@item.category_id)
+    Category << @category
+  end
   # Never trust parameters from the scary internet, only allow the white list through.
   def item_params
-    params.require(:item).permit(:title, :price, :category, :user, :tag_list,
+    params.require(:item).permit(:title, :price, :category_id, :user, :tag_list,
                                  :photos_attributes => [:_photo])
   end
 
